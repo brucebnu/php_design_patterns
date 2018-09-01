@@ -1,17 +1,34 @@
 <?php
+/**
+ * 工厂方法模式  factory_method
+ * @description
+ *
+ * 01/09/2018
+ */
 
-class Button{/* ...*/}
-class WinButton extends Button{/* ...*/}
-class MacButton extends Button{/* ...*/}
+class Button
+{/* ...*/
+}
 
-interface ButtonFactory{
+class WinButton extends Button
+{/* ...*/
+}
+
+class MacButton extends Button
+{/* ...*/
+}
+
+interface ButtonFactory
+{
     public function createButton($type);
 }
 
-class MyButtonFactory implements ButtonFactory{
+class MyButtonFactory implements ButtonFactory
+{
     // 实现工厂方法
-    public function createButton($type){
-        switch($type){
+    public function createButton($type)
+    {
+        switch ($type) {
             case 'Mac':
                 return new MacButton();
             case 'Win':
@@ -24,4 +41,3 @@ class MyButtonFactory implements ButtonFactory{
 $button_obj = new MyButtonFactory();
 var_dump($button_obj->createButton('Mac'));
 var_dump($button_obj->createButton('Win'));
-?>

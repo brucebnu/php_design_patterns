@@ -1,4 +1,10 @@
 <?php
+/**
+ * 抽象工厂模式  abstract_factory
+ * @description
+ *
+ * 01/09/2018
+ */
 
 class Button{}
 class Border{}
